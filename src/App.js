@@ -4,9 +4,9 @@ import { Header, MovieDetails, MovieList } from "./components";
 class App extends Component {
   render(){
     return (
-      <div className="App">
+      <div className="App d-flex flex-column">
         <Header/>
-        <div className="d-flex flex-row">
+        <div className="d-flex flex-row border flex-fill pt-4">
           <MovieList/>
           <MovieDetails />
         </div>
