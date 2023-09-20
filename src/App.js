@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, MovieDetails, MovieList, Loading } from "./components";
+import { Header, MovieDetails, MovieList, Loading, SearchBar } from "./components";
 import apiMovie from './conf/api.movie';
 
 class App extends Component {
@@ -46,6 +46,7 @@ class App extends Component {
     return (
       <div className="App d-flex flex-column">
         <Header/>
+        <SearchBar updateMovies={ this.updateMovies } />
         {this.state.loaded ? (
           <div className="d-flex flex-row border flex-fill pt-4 p-2">
             <MovieList movies={this.state.movies} updateSelectedMovie={this.updateSelectedMovie} />
